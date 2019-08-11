@@ -130,8 +130,8 @@ public static void main(String[] args) throws IOException {
     }
 }
 
-private static void DFS(int parent, int now, int depth, int[] visit, int[] low, boolean[][] map,
-    List < List < Integer >> bridges) {
+private static void DFS(int parent, int now, int depth, int[] visit, int[] low,
+                        boolean[][] map, List < List < Integer >> bridges) {
     visit[now] = low[now] = depth++;
     for (int i = 0; i < visit.length; i++) {
         if (map[now][i]) {
@@ -204,7 +204,8 @@ public static void main(String[] args) throws IOException {
     }
 }
 
-private static void DFS(int parent, int now, int[] visit, int[] low, List < Pigeon > pigeons, boolean[][] map) {
+private static void DFS(int parent, int now, int[] visit, int[] low,
+                        List <Pigeon> pigeons, boolean[][] map) {
     visit[now] = low[now] = visit[parent] + 1;
     int child = 0;
     for (int i = 0; i < visit.length; i++) {
