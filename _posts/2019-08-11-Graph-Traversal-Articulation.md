@@ -19,7 +19,9 @@ tags:
 
 ## 題型
 
-* ### 求Articulation Vertex數量
+### 求Articulation Vertex數量 
+### [UVa 315 - Network](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=251)
+
 > 找任意點建立DFSTree,用DFSTree判斷,有兩種情形
 > 1. 判斷點為根節點
 > 利用DFS的特性,根節點如果有兩個以上的子樹，
@@ -27,8 +29,7 @@ tags:
 > 1. 判斷點不為根節點
 > 判斷點的子樹所有的Back Edge是否有深度比該點小(<=),沒有則此點為Articulation Vertex
 
-#### [UVa 315 - Network](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=251)
-``` java
+``` java =
 public static void main(String[] args) throws IOException {
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	StringBuilder sb = new StringBuilder();
@@ -78,11 +79,13 @@ private static int DFS(int parent, int now, int depth, int[] visit, int[] low
 	return ans;
 }
 ```
-* ### 尋找所有Articulation Bridge
-#### [UVa 796 - Critical Links](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=737)
+### 尋找所有Articulation Bridge 
+### [UVa 796 - Critical Links](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=737)
+
 > 用DFS找Articulation Vertex的原理是判斷某點的每條邊有沒有Articulation Bridge
 > 如果有某點就是Articulation Vertex,所以解法跟上一題一樣
 > 因為輸出要求排序,所以用一個Adjacency List紀錄Articulation Bridge
+
 ``` java
 public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -147,13 +150,15 @@ private static void DFS(int parent, int now, int depth, int[] visit, int[] low, 
     }
 }
 ```
-* ### 尋找所有的 Bridge-connected Component
-#### [UVa 10765 - Doves and bombs](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=737)
+### 尋找所有的 Bridge-connected Component
+### [UVa 10765 - Doves and bombs](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=737)
+
 > 求如果某點消失,原本的圖會被分成幾個連通圖
 > 用DFS找Articulation Bridge,找到就記錄在起點上
 > 最後再全部+1把終點的數量補上
 > 因為要根據連通圖數量排序所以加了Comparable的Pigeon的Class(Code變超醜zz)
 > 可能可以用Tarjan's Algorithm做,但UVa分類在Articulation所以就這樣解了
+
 ``` java
 static int root;
 
