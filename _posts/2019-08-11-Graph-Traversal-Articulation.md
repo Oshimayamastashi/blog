@@ -29,7 +29,7 @@ tags:
 > 1. 判斷點不為根節點
 > 判斷點的子樹所有的Back Edge是否有深度比該點小(<=),沒有則此點為Articulation Vertex
 
-``` java =
+``` java
 public static void main(String[] args) throws IOException {
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	StringBuilder sb = new StringBuilder();
