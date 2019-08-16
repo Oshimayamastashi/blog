@@ -143,7 +143,8 @@ private static void initial(int personNum) {
 [UVa 11838 - Come and Go ***](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2938)
 
 > 某城市的路口是由多條單向或雙向道交接而成, 要判斷所有路口是否都相通
-> 用Tarjan's Algorithm算出SCC, Check是不是所有點都在通一個SCC
+> 用Tarjan's Algorithm算出SCC, Check是不是所有點都在同一個SCC
+
 ``` 
 private static int index;
 
@@ -239,6 +240,7 @@ private static void inital(int num) {
 > 告訴多米諾骨牌中推倒某骨牌那些骨牌會跟著倒,要求最少要推倒幾個骨牌
 > SCC中任意一個被推倒, 整個SCC內的骨牌都會倒, 可以想成每個SCC都是一個大骨牌
 > 找到沒有被其他SCC指到的SCC的數量, 就是答案
+
 ```
 Submit一直RTE, 懷疑是我用List<List>當圖的Adjacency List造成
 先冰冰箱, 有機會再補
