@@ -23,9 +23,10 @@ tags:
 ## 題型
 ### 從Graph中找出Strongly Connected Component
 [UVa 247 - Calling Circles **](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=183)
->電話公司要算出通話的小圈圈, 其實就是找出SCC, 然後輸出
 
-``` java
+> 電話公司要算出通話的小圈圈, 其實就是找出SCC, 然後輸出
+
+```
 private static List <List<Integer>> calls = new ArrayList <> ();
 
 private static List <List<Integer>> circles = new ArrayList <> ();
@@ -143,7 +144,7 @@ private static void initial(int personNum) {
 
 > 某城市的路口是由多條單向或雙向道交接而成, 要判斷所有路口是否都相通
 > 用Tarjan's Algorithm算出SCC, Check是不是所有點都在通一個SCC
-``` java
+``` 
 private static int index;
 
 private static int connectNum;
