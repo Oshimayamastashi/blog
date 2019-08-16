@@ -2,7 +2,7 @@
 layout:     post
 title:      "UVa Graph Traversal - Articulation"
 subtitle:   ""
-date:       2019-07-29
+date:       2019-08-11
 author:     "Java"
 header-img: "img/home-bg.jpg"
 catalog: true
