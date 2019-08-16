@@ -11,7 +11,6 @@ tags:
   - Strongly Connected Component
   - Graph
 ---
-# Graph Traversal - Strongly Connected Component
 ## 名詞解釋
 * Connected 連通: Graph中頂點(Vertice)a跟頂點有路可通,則兩點連通
 * Strongly Connected 強連通: 在有向圖中,兩點之間雙向皆有路可通，為強連通
