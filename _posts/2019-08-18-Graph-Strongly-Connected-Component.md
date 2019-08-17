@@ -49,7 +49,7 @@ DFS進去點時設為true, 設定完SCC後再設為false
 比較少用到, 有時間一定補, 就是這麼任性  
 
 ## 題型
-*  從Graph中找出Strongly Connected Component
+### 從Graph中找出Strongly Connected Component
 
 [UVa 247 - Calling Circles **](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=183)
 > 電話公司要算出通話的小圈圈, 其實就是找出SCC, 然後輸出  
