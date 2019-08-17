@@ -20,18 +20,18 @@ tags:
 
 ## 演算法
 ### Tarjan's Algorithm
-![](https://i.imgur.com/1a7D59W.png)
+![](img/1.png)
 用DFS遍歷整張圖,進入點後將點加入Stack
 陣列Visit紀錄該點進入DFS的順序
 陣列Low紀錄該點能觸及到順序最前的點
 陣列SCC紀錄該點所屬的SCC
 
-![](https://i.imgur.com/dMxfgfa.png)
+![](img/2.png)
 當某點Low等於Visit時
 代表該點為SCC的最上層(如上圖的點2、點1)
 此時Stack中該點之前的所有點(2,3,4,5)屬於同一個SCC
 
-![](https://i.imgur.com/rqaRRbE.png)
+![](img/3.png)
 計算某點的Low是從所有該點為起點的邊中尋找終點Visit的最小值
 其中比較特別的情況是如果終點不在同一個SCC就不能計算進去
 如圖的點2跟點7為不同SCC,這條邊就該略過
