@@ -49,9 +49,9 @@ DFS進去點時設為true, 設定完SCC後再設為false
 比較少用到, 有時間一定補, 就是這麼任性  
 
 ## 題型
-### 從Graph中找出Strongly Connected Component
+*  從Graph中找出Strongly Connected Component
 [UVa 247 - Calling Circles **](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=183)
->電話公司要算出通話的小圈圈, 其實就是找出SCC, 然後輸出  
+> 電話公司要算出通話的小圈圈, 其實就是找出SCC, 然後輸出  
 
 ``` 
 private static List<List<Integer>> calls = new ArrayList <>();
@@ -170,7 +170,7 @@ private static void initial(int personNum) {
 
 [UVa 11838 - Come and Go ***](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2938)
 
->某城市的路口是由多條單向或雙向道交接而成, 要判斷所有路口是否都相通  
+> 某城市的路口是由多條單向或雙向道交接而成, 要判斷所有路口是否都相通  
 > 用Tarjan's Algorithm算出SCC, Check是不是所有點都在通一個SCC
 
 ``` 
