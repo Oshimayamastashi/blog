@@ -26,43 +26,32 @@ tags:
 陣列SCC紀錄該點所屬的SCC  
 
 ![](/blog/img/20190818/2.png)
-當某點Low等於Visit時
-
-代表該點為SCC的最上層(如上圖的點2、點1)
-
+當某點Low等於Visit時  
+代表該點為SCC的最上層(如上圖的點2、點1)  
 此時Stack中該點之前的所有點(2,3,4,5)屬於同一個SCC
 
 ![](/blog/img/20190818/3.png)
-計算某點的Low是從所有該點為起點的邊中尋找終點Visit的最小值
-
-其中比較特別的情況是如果終點不在同一個SCC就不能計算進去
-
-如圖的點2跟點7為不同SCC,這條邊就該略過
-
-要避免的最好方法就是判斷該終點有沒有在Stack中
-
-用ArrayList的contain method每次都要花費O(n)的時間
-
-比較好的方法是新增boolean陣列inStack在放入跟取出Stack時紀錄
-
+計算某點的Low是從所有該點為起點的邊中尋找終點Visit的最小值 
+其中比較特別的情況是如果終點不在同一個SCC就不能計算進去   
+如圖的點2跟點7為不同SCC,這條邊就該略過  
+要避免的最好方法就是判斷該終點有沒有在Stack中  
+用ArrayList的contain method每次都要花費O(n)的時間  
+比較好的方法是新增boolean陣列inStack在放入跟取出Stack時紀錄  
 DFS進去點時設為true, 設定完SCC後再設為false
 
 ### Kosaraju's Algorithm
-速度沒Tarjan快還要做Graph的transpose,有機會再細講
-
-主要觀念是利用圖的反向圖和原圖具有一樣的SCC
-
-是先做一次DFS紀錄Reverse PostOrder
-
-在根據紀錄的Order的倒序做DFS, 每次DFS都會是得到一個SCC
+速度沒Tarjan快還要做Graph的transpose,有機會再細講  
+主要觀念是利用圖的反向圖和原圖具有一樣的SCC  
+是先做一次DFS紀錄Reverse PostOrder  
+在根據紀錄的Order的倒序做DFS, 每次DFS都會是得到一個SCC  
 
 ### Gabow's algorithm
-比較少用到, 有時間一定補, 就是這麼任性
+比較少用到, 有時間一定補, 就是這麼任性  
 
 ## 題型
 ### 從Graph中找出Strongly Connected Component
 [UVa 247 - Calling Circles **](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=183)
->電話公司要算出通話的小圈圈, 其實就是找出SCC, 然後輸出
+>電話公司要算出通話的小圈圈, 其實就是找出SCC, 然後輸出  
 
 ``` 
 private static List<List<Integer>> calls = new ArrayList <>();
@@ -181,8 +170,7 @@ private static void initial(int personNum) {
 
 [UVa 11838 - Come and Go ***](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2938)
 
->某城市的路口是由多條單向或雙向道交接而成, 要判斷所有路口是否都相通
-
+>某城市的路口是由多條單向或雙向道交接而成, 要判斷所有路口是否都相通  
 > 用Tarjan's Algorithm算出SCC, Check是不是所有點都在通一個SCC
 
 ``` 
@@ -278,11 +266,9 @@ private static void inital(int num) {
 ```
 
 [UVa 11504 - Dominos **](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2499)
-> 告訴多米諾骨牌中推倒某骨牌那些骨牌會跟著倒,要求最少要推倒幾個骨牌
-
-> SCC中任意一個被推倒, 整個SCC內的骨牌都會倒, 可以想成每個SCC都是一個大骨牌
-
-> 找到沒有被其他SCC指到的SCC的數量, 就是答案
+> 告訴多米諾骨牌中推倒某骨牌那些骨牌會跟著倒,要求最少要推倒幾個骨牌  
+> SCC中任意一個被推倒, 整個SCC內的骨牌都會倒, 可以想成每個SCC都是一8個大骨牌  
+> 找到沒有被其他SCC指到的SCC的數量, 就是答案  
 
 ```
 Submit一直RTE, 懷疑是我用List<List>當圖的Adjacency List造成
