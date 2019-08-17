@@ -20,13 +20,10 @@ tags:
 ## 演算法
 ### Tarjan's Algorithm
 ![](/blog/img/20190818/1.png)
-用DFS遍歷整張圖,進入點後將點加入Stack
-
-陣列Visit紀錄該點進入DFS的順序
-
-陣列Low紀錄該點能觸及到順序最前的點
-
-陣列SCC紀錄該點所屬的SCC
+用DFS遍歷整張圖,進入點後將點加入Stack  
+陣列Visit紀錄該點進入DFS的順序  
+陣列Low紀錄該點能觸及到順序最前的點  
+陣列SCC紀錄該點所屬的SCC  
 
 ![](/blog/img/20190818/2.png)
 當某點Low等於Visit時
