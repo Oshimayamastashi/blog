@@ -54,7 +54,8 @@ public static void main(String[] args) throws IOException {
  System.out.print(sb);
 }
 
-private static int DFS(int parent, int now, int depth, int[] visit, int[] low, boolean[][] map) {
+private static int DFS(int parent, int now, int depth, int[] visit,
+ int[] low, boolean[][] map) {
  visit[now] = low[now] = ++depth;
  int ans = 0;
  int childNum = 0;
